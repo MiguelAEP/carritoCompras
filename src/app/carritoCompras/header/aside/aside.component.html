@@ -1,0 +1,26 @@
+
+    <ul class="text-end">   
+            <button (click)="open()" class="btn btn-primary">carrito</button>
+            
+    </ul>
+    <div *ngIf="abierto"
+    class="card" style="width: 13rem;" >
+    <h4>Historial de Compras</h4>
+    <div  *ngFor="let elementos of guardaCarrito;let i = index">
+
+      <img src={{elementos.imagen}} class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><strong>precio Inicial : {{elementos.precioInicial}}</strong></h5>
+        <h5 class="card-title"><strong>Producto:</strong>{{elementos.nombre}} </h5>
+        <p class="card-text"> <strong>Precio:</strong> S/{{elementos.precio}}</p>
+        <strong>Cantidad:</strong>
+        
+        <a href="#" class="btn btn-primary" (click)="eliminar(elementos,i)">{{elementos.cantidad}}</a>
+        
+      </div>
+      <hr>
+    </div>
+      
+    </div>
+    
+

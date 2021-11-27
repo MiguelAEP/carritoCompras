@@ -1,0 +1,24 @@
+<div class="container">
+
+    <div class="row row-cols-2 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let elementos of imagenes; let i = index">
+
+          <div class="card h-100">
+            <img src={{elementos.imagen}} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{elementos.nombre}}</h5>
+              <p class="card-text">Mouse Gamer.</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+             <p>S/.{{elementos.precio}}</p>
+             <button (click)="enviar(elementos)"
+             class="btn btn-primary ">enviar al carrito</button>
+            </div>
+            
+          </div>
+
+         
+        
+        </div>
+       
+</div>
